@@ -12,5 +12,5 @@ image_urls=(
 
 for url in "${image_urls[@]}"; do
   file_name=$(basename "$url")
-  curl -sSfL -o "samples/$file_name" "$url"
+    curl --ssl-no-revoke -sSfL -o "samples/$file_name" "$url"
 done
